@@ -1,0 +1,706 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'montserrat'; */
+    color: #fff;
+}
+
+*::selection {
+
+    background-color: #fff;
+    color: #95C11E;
+}
+
+
+
+
+body {
+    overflow-x: hidden;
+
+}
+
+body::-webkit-scrollbar {
+
+    display: block;
+    width: 3px;
+    background-color: #95C11E;
+}
+
+body::-webkit-scrollbar-thumb {
+
+    background-color: #fff;
+    /* display: block; */
+    /* width: 5px; */
+    /* background-color: #18A138; */
+}
+
+html body {
+
+    width: 100%;
+    height: 100%;
+
+    perspective: 1;
+}
+
+
+#cursor {
+
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 999;
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1)1s; */
+    transition: all linear 0.4s;
+
+}
+
+
+#cursor-blur {
+
+    height: 200px;
+    width: 200px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: -1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    filter: blur(90px);
+}
+
+
+#nav {
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: black; */
+    height: 150px;
+    width: 100%;
+    gap: 70px;
+    position: fixed;
+    z-index: 99;
+    font-family: cursive;
+
+}
+
+#nav img {
+
+    height: 100px;
+    width: 100px;
+
+}
+
+#nav h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+video {
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+
+}
+
+
+#main {
+    position: relative;
+    background-color: rgb(0, 0, 0, 0.385);
+
+
+}
+
+
+#page1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    /* background-color: red; */
+
+}
+
+#page1 h1 {
+    /* padding-top: 50px; */
+    width: 70%;
+    font-size: 150px;
+    font-weight: 900;
+    position: relative;
+}
+
+
+#page1 h1::before {
+    content: 'EAT. DRINK. PLAY.';
+    /* content: "; */
+    position: absolute;
+    color: #000;
+    top: -8px;
+    left: -8px;
+    -webkit-text-stroke: 3px #95C11E;
+    z-index: -1;
+}
+
+
+#page1 h3 {
+    font-weight: 700;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+
+#page1 h4 {
+    font-weight: 100;
+    font-size: 20px;
+    width: 35%;
+
+}
+
+
+#page2 {
+    min-height: 150vh;
+    width: 100%;
+    /* position: fixed; */
+
+}
+
+
+#scroller {
+    /* width: 100%; */
+    /* height: 100px; */
+    /* background-color: red; */
+    /* display: inline-block; */
+    white-space: nowrap;
+    position: relative;
+    /* z-index: 99; */
+
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+
+}
+
+#scroller h4 {
+    transition: all linear 0.5s;
+    display: inline-block;
+    font-size: 120px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    margin-right: 10px;
+    color: transparent;
+    -webkit-text-stroke: 3px #95C11E;
+    /* white-space: nowrap; */
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+
+#scroller h4:hover {
+
+    color: #95C11E;
+
+}
+
+#scroller-1 {
+    display: inline-block;
+    white-space: nowrap;
+
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller-2 {
+    display: inline-block;
+    white-space: nowrap;
+
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+@keyframes scroll {
+
+    from {
+
+        transform: translateX(0%);
+
+    }
+
+
+    to {
+        transform: translateX(-100%);
+
+    }
+
+}
+
+
+
+#page2-part2 {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    /* z-index: 99; */
+}
+
+#about {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background-color: red; */
+    height: 350px;
+    width: 800px;
+
+
+}
+
+#about h3 {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 30px;
+    font-weight: 900;
+
+}
+
+#page2-part2 img {
+    height: 150px;
+    border-radius: 20px;
+}
+
+#about h4 {
+    font-family: cursive;
+    font-size: 22px;
+    line-height: 2;
+    font-weight: 100;
+
+
+}
+
+#hr {
+
+    padding-bottom: 20px;
+
+}
+
+
+#page2-part3 {
+
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#page2-part3 img {
+
+    height: 300px;
+
+
+}
+
+#page2-part3 img:hover {
+
+    background-color: #95C11E;
+    color: #fff;
+
+}
+
+
+
+#container {
+
+    height: 500px;
+    width: 100%;
+    /* background-color: #95C11E; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px 30px;
+
+}
+
+.card {
+    background-position: center;
+    background-size: cover;
+    height: 80%;
+    width: 24%;
+    /* background-color: #000; */
+    border-radius: 30px;
+    transition: all ease-in 0.5s;
+}
+
+
+#card1 {
+
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C682&ssl=1);
+
+}
+
+#card2 {
+
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+
+}
+
+#card3 {
+
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+
+}
+
+.over {
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding: 90px 40px;
+    border-radius: 30px;
+    /* mix-blend-mode: difference */
+    /* mix-blend-mode: color ; */
+    opacity: 0;
+    transition: all ease-in 0.5s;
+
+}
+
+.card:hover .over {
+
+    opacity: 1;
+
+}
+
+.card:hover {
+
+    transform: rotate3d(-1, 1, 0, 20deg);
+
+}
+
+
+
+.over h3 {
+    font-weight: 900;
+    font-size: 26px;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+.over p {
+
+    font-size: 20px;
+    font-weight: 100;
+
+}
+
+#green {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+    width: 100%;
+    background: linear-gradient(to left bottom, #95C11E, #18A138);
+
+}
+
+
+#green img {
+
+    height: 100%;
+    object-fit: cover;
+    width: 10%;
+
+}
+
+#green h4 {
+
+    width: 50%;
+    line-height: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+#page3 {
+
+    height: 100vh;
+    width: 100%;
+    color: #000;
+}
+
+
+#p3-1 h4 {
+    margin-top: 200px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+    width: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#p3-1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+#p3-1 img {
+    position: absolute;
+    height: 60px;
+
+}
+
+#colon1 {
+
+    left: 20%;
+    top: 25%;
+}
+
+#colon2 {
+
+    right: 20%;
+    bottom: -14%;
+}
+
+
+
+
+
+#page4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+
+}
+
+
+#page4 h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+    position: absolute;
+    /* top:-3px ; */
+    bottom: 200px;
+}
+
+.elem {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    background-color: #95C11E;
+    height: 150px;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+
+.elem h1 {
+    transition: all linear 0.5s;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+}
+
+
+.elem img {
+
+    height:
+        100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+
+#arrow {
+
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: transparent;
+    /* background-color: red;
+ */
+    border: 2px solid #95C11E;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -40px;
+    top: 80%;
+    transition: all ease 0.5s;
+
+}
+
+#arrow i {
+
+    font-size: 45px;
+    font-weight: 100;
+}
+
+
+
+#arrow:hover {
+
+    scale: 0.4;
+    background-color: #95C11E;
+
+}
+
+
+
+
+
+
+.elem:hover h1 {
+
+    background-color: #95C11E;
+    color: #000;
+}
+
+
+#footer {
+
+    height: 53vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #18A138, #95C11E);
+    /* background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg); */
+
+}
+
+
+#footer1 {
+    padding: 20px 30px;
+    height: 35vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+}
+
+#footer1 img {
+
+    height: 150px;
+    width: 150px;
+    transition: all ease 0.5s;
+}
+
+#f1 img:hover {
+    width: 140px;
+    height: 140px;
+}
+
+#footer1 h3 {
+    /* background-color: #fff; */
+
+    font-weight: 700;
+    font-size: 27px;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 40px;
+}
+
+
+#footer1 h4 {
+
+    font-size: 17px;
+    color: #000;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#logo {
+
+    width: 100%;
+    height: 100vh;
+}
+
+#footer2 {
+    /* background-color: red; */
+    width: 100%;
+    height: 50px;
+    padding-left: 100px;
+}
+
+#footer2 i {
+    color: #000;
+    font-size: 40px;
+    margin-left: 10px;
+    transition: all ease 0.5s;
+}
+
+#footer2 i:hover {
+    color: #fff;
+
+}
+
+#footer3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 50px;
+    /* background-color: aqua; */
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+#footer3 h3 {
+    padding-top: 20px;
+    color: #000;
+    font-size: larger;
+    font-weight: 900;
+
+}
+
+#footer3 i {
+
+    color: #000;
+    transition: all ease 0.5s;
+}
+
+#footer3 i:hover {
+    color: gold;
+
+}
